@@ -4,6 +4,7 @@ using namespace std;
 
 #define sqr(a) (a * a)
 
+// O(log n)
 // Returns x ^ n
 long pow(long x, long n) {
     if (!n) {
@@ -11,7 +12,7 @@ long pow(long x, long n) {
     }
 
     if (n % 2) {
-        return x * pow(sqr(x), (n - 1) / 2)
+        return x * pow(sqr(x), (n - 1) / 2);
     } else {
         return pow(sqr(x), n / 2);
     }
