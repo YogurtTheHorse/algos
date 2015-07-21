@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// O(x^0.5)
 long dividersCount(long x) {
     int c = 1;
     for (int i = 2; i * i < x; i++) {
