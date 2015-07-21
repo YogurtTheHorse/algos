@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// O(n + m)
 long *sort_sum(long n, long m, long *A, long *B) {
     long k = 0,
          l = 0;
