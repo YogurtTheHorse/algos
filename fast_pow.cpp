@@ -28,6 +28,8 @@ long pow_loop(long n, long x) {
         x *= x;
         n /= 2;
     }
+    
+    return r;
 }
 
 int main () {
