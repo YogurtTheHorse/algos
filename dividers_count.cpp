@@ -13,6 +13,10 @@ long dividersCount(long x) {
         c *= p;
     }
 
+    if (x != 1) {
+        c *= 2;
+    }
+
     return c;
 }
 
