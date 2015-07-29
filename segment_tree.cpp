@@ -28,29 +28,49 @@ class SegmentTree {
             int mid = (L + R) / 2;
             if (mid >= r) {
                 return get (i * 2 + 1, l, r, L, mid);
-            } else if (mid < r) {
+            } else if (mid < l) {
                 return get (i * 2 + 2, l, r, mid + 1, R);
             }
 
             return f(get(i * 2 + 1, l, mid, L, mid), get(i * 2 + 2, mid + 1, r, mid + 1, R));
         }
-    public:
-        SegmentTree(int n, T *a, T (*foo)(T, T)) {
-            this->n = n;
-            this->a = a;
-            f = foo;
-            tree = new T[n];
 
-            build(0, 0, n - 1);
-        }
+        void change(int i, T x, int index, int L, int R) {
+            if (L == R) {
+                tree[index] = x;
+                return;
+            }
 
-        T get() {
-            return get(0, n - 1);
-        }
+            int mid = (L + R) / 2;
+            if (mid >= i) {
+                change(i, x, index * 2 + 1, L, mid);
+            } else {
+                change(i, x, index * 2 + 2, mid + 1, R);
+            }
 
-        T get(int l, int r) {
-            return get(0, l, r, 0, n - 1);
+            tree[index] = f(tree[index * 2 + 1], tree[index * 2 + 2]);
         }
+public:
+    SegmentTree(int n, T *a, T (*foo)(T, T)) {
+        this->n = n;
+        this->a = a;
+        f = foo;
+        tree = new T[n * 4];
+
+        build(0, 0, n - 1);
+    }
+
+    T get() {
+        return get(0, n - 1);
+    }
+
+    T get(int l, int r) {
+        return get(0, l, r, 0, n - 1);
+    }
+
+    void change(int i, T x) {
+        change(i, x, 0, 0, n - 1);
+    }
 };
 
 int main() {
