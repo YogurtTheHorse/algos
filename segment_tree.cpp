@@ -6,12 +6,12 @@ template<class T>
 class SegmentTree {
     private:
         T *tree, *a;
-        T *(f)(T, T);
+        T (*f)(T, T);
         int n;
 
         void build(int i, int l, int r) {
             if (l == r) {
-                tree[i] = a[i];
+                tree[i] = a[l];
             } else {
                 int mid = (l + r) / 2;
                 build(2 * i + 1, l, mid);
@@ -35,10 +35,10 @@ class SegmentTree {
             return f(get(i * 2 + 1, l, mid, L, mid), get(i * 2 + 2, mid + 1, r, mid + 1, R));
         }
     public:
-        SegmentTree(int n, T *a, T (*f)(T, T)) {
+        SegmentTree(int n, T *a, T (*foo)(T, T)) {
             this->n = n;
             this->a = a;
-            this->f = f;
+            f = foo;
             tree = new T[n];
 
             build(0, 0, n - 1);
