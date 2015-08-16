@@ -22,8 +22,9 @@ long pow(long x, long n) {
 long pow_loop(long n, long x) {
     long r = 1;
     while (n) {
-        if (n % 2 == 0) {
+        if (n & 1) {
             r *= x;
+            n--;
         }
         x *= x;
         n /= 2;
