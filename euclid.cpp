@@ -13,7 +13,7 @@ long gcd(long a, long b) {
 }
 
 long lnc(long a, long b) {
-    return a (b / gcd(a, b));
+    return a * (b / gcd(a, b));
 }
 
 int main () {
