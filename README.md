@@ -202,4 +202,4 @@ Better read comments before using.
 ## License
 This work is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
-[gcd complex]: https//en.wikipedia.org/wiki/Euclidean_algorithm#Algorithmic_efficiency
+[gcd complex]: https//en.wikipedia.org/wiki/Euclidean_algorithm
