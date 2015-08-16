@@ -5,15 +5,15 @@ I wrote some algos for program olympiads.
 
 ### Algos list:
 
-1. [DFS](#dfs-source)
-2. [Dividers count](#dividers-count-source)
-3. [Euclid algorithm](#euclid-algorithm-source)
+1. [DFS](#dfs---source)
+2. [Dividers count](#dividers-count---source)
+3. [Euclid algorithm](#euclid-algorithm---source)
   3.1. [GCD](#gcd)
   3.2. [LCM](#lcm)
-4. [Fast power](#fast-power-source)
-5. [Is prime](#is-prime-source)
-6. [Segment tree](#segment-tree-source)
-7. [Sorting](#sorting-source)
+4. [Fast power](#fast-power---source)
+5. [Is prime](#is-prime---source)
+6. [Segment tree](#segment-tree---source)
+7. [Sorting](#sorting---source)
 
 ### DFS - [source](https://github.com/yegorf1/algos/blob/master/dfs.cpp)
 There are two functions. You need two use second one (But if you don't want to enter some vertex you have to use second).
