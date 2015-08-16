@@ -68,7 +68,8 @@ There are two functions:
   - Complex:
 
       > In the uniform cost model (suitable for analyzing the complex:ity of gcd calculation on numbers that fit into a single machine word), each step of the algorithm takes constant time, and Lamé's analysis implies that the total running time is also **O(h)**.
-      [Wikipedia][gcd complex]
+
+      [Wikipedia](https://en.wikipedia.org/wiki/Euclidean_algorithm#Algorithmic_efficiency)
 
   - Returns:
     Greatest common devider of `a` and `b`
@@ -201,5 +202,3 @@ Better read comments before using.
 
 ## License
 This work is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
-
-[gcd complex]: https//en.wikipedia.org/wiki/Euclidean_algorithm
