@@ -12,7 +12,7 @@ long gcd(long a, long b) {
     return a;
 }
 
-long lmc(long a, long b) {
+long lcm(long a, long b) {
     return a * (b / gcd(a, b));
 }
 
