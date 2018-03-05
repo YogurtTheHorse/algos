@@ -27,7 +27,7 @@ long pow_loop(long n, long x) {
             n--;
         }
         x *= x;
-        n /= 2;
+        n >>= 1;
     }
     
     return r;
