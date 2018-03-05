@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define sqr(a) (a * a)
+#define sqr(a) ((a) * (a))
 
 // O(log n)
 // Returns x ^ n
